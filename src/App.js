@@ -6,11 +6,11 @@ import Footer from "./components/Footer";
 import ContactForm from "./components/Contact";
 
 function App() {
-  const [contactSelected, setContactSelected] = useState(false);
   const [navChoices] = useState([
     { name: "About me" },
     { name: "Portfolio" },
     { name: "Resume" },
+    { name: "Contact" },
   ]);
   const [currentChoice, setCurrentChoice] = useState(navChoices[0]);
   return (
@@ -19,18 +19,13 @@ function App() {
         navChoices={navChoices}
         setCurrentChoice={setCurrentChoice}
         currentChoice={currentChoice}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
       ></Nav>
       <main>
-        {!contactSelected ? (
-          <>
-            {currentChoice.name === "About me" && <About></About>}
-            {currentChoice.name === "Portfolio" && <Porfolio></Porfolio>}
-          </>
-        ) : (
-          <ContactForm></ContactForm>
-        )}
+        <>
+          {currentChoice.name === "About me" && <About></About>}
+          {currentChoice.name === "Portfolio" && <Porfolio></Porfolio>}
+          {currentChoice.name === "Contact" && <ContactForm></ContactForm>}
+        </>
       </main>
       <Footer></Footer>
     </div>

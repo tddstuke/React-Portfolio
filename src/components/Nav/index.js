@@ -1,13 +1,7 @@
 import React from "react";
 
 function Nav(props) {
-  const {
-    navChoices = [],
-    setCurrentChoice,
-    currentChoice,
-    contactSelected,
-    setContactSelected,
-  } = props;
+  const { navChoices = [], setCurrentChoice, currentChoice } = props;
   return (
     <div className="container">
       <header className="row d-flex justify-content-between">
@@ -25,29 +19,19 @@ function Nav(props) {
             {navChoices.map((choice) => (
               <li
                 className={`col-md-3 mt-5 mb-3 ${
-                  currentChoice.name === choice.name &&
-                  !contactSelected &&
-                  "text-primary"
+                  currentChoice.name === choice.name && "text-primary"
                 }`}
                 key={choice.name}
               >
                 <span
                   onClick={() => {
                     setCurrentChoice(choice);
-                    setContactSelected(false);
                   }}
                 >
                   {choice.name}
                 </span>
               </li>
             ))}
-
-            <li
-              className={`col-md-3 mt-5 mb-3
-               ${contactSelected && "text-primary"}`}
-            >
-              <span onClick={() => setContactSelected(true)}>Contact</span>
-            </li>
           </ul>
         </nav>
       </header>
