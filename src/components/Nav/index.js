@@ -1,6 +1,13 @@
 import React from "react";
 
-function Nav() {
+function Nav(props) {
+  const {
+    navChoices = [],
+    setCurrentChoice,
+    currentChoice,
+    contactSelected,
+    setContactSelected,
+  } = props;
   return (
     <div className="container">
       <header className="row d-flex justify-content-between">
@@ -15,43 +22,31 @@ function Nav() {
         </h2>
         <nav className="col-md-7">
           <ul className=" row list-unstyled">
-            <li className="col-md-3 mt-5 mb-3">
-              <a
-                className="text-reset text-decoration-none"
-                data-testid="about"
-                href="#about"
-                // onClick={() => setContactSelected(false)}
+            {navChoices.map((choice) => (
+              <li
+                className={`col-md-3 mt-5 mb-3 ${
+                  currentChoice.name === choice.name &&
+                  !contactSelected &&
+                  "text-primary"
+                }`}
+                key={choice.name}
               >
-                About me
-              </a>
-            </li>
-            <li className="col-md-3 mt-5 mb-3">
-              <a
-                className="text-reset text-decoration-none"
-                data-testid="about"
-                href="#about"
-                // onClick={() => setContactSelected(false)}
-              >
-                Portfolio
-              </a>
-            </li>
-            <li className="col-md-3 mt-5 mb-3">
-              <a
-                className=" text-reset text-decoration-none"
-                data-testid="about"
-                href="#about"
-                // onClick={() => setContactSelected(false)}
-              >
-                Resume
-              </a>
-            </li>
+                <span
+                  onClick={() => {
+                    setCurrentChoice(choice);
+                    setContactSelected(false);
+                  }}
+                >
+                  {choice.name}
+                </span>
+              </li>
+            ))}
+
             <li
-              className="text-reset col-md-3 mt-5 mb-3"
-              // className={`mx-2 ${contactSelected && "navActive"}`}
+              className={`col-md-3 mt-5 mb-3
+               ${contactSelected && "text-primary"}`}
             >
-              {/* <span onClick={() => setContactSelected(true)}> */}
-              Contact
-              {/* </span> */}
+              <span onClick={() => setContactSelected(true)}>Contact</span>
             </li>
           </ul>
         </nav>

@@ -5,13 +5,13 @@ function Project() {
     {
       name: "Not Another IMDB",
       description:
-        "Search for your favorite movies or find new favorites and add then to your custom lists!",
+        "Search for your favorite movies or find new favorites and add them to your custom lists!",
       link: "https://protected-woodland-09194.herokuapp.com",
     },
     {
       name: "Tech Blog",
       description:
-        "Read, Write and comment on Tech news using this intuitive blog site!",
+        "Read, write and comment on Tech news using this intuitive blog site!",
       link: "https://agile-mesa-60950.herokuapp.com/",
     },
   ]);
@@ -26,7 +26,6 @@ function Project() {
           <div className="col">
             <div className="card-block p-2">
               <h4 className="card-title">{image.name}</h4>
-              <p className="card-text">{image.description}</p>
             </div>
 
             <div className="row no-gutters">
@@ -39,6 +38,9 @@ function Project() {
                 src={require(`../../assets/${i}.jpg`)}
                 alt={image.name}
               />
+            </div>
+            <div className="card-block p-2">
+              <p className="card-text">{image.description}</p>
             </div>
           </div>
         </a>
