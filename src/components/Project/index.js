@@ -22,6 +22,7 @@ function Project() {
         <a
           href={image.link}
           className="card col-md-5 p-2 text-reset text-decoration-none"
+          key={image.name}
         >
           <div className="col">
             <div className="card-block p-2">
@@ -29,10 +30,6 @@ function Project() {
             </div>
 
             <div className="row no-gutters">
-              {/* <div className="col-6 carousel-caption text-danger text-left">
-              <h4 className="card-title">{image.name}</h4>
-              <p className=" card-text">{image.description}</p>
-            </div> */}
               <img
                 className="col-md-12"
                 src={require(`../../assets/${i}.jpg`)}

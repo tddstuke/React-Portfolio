@@ -4,6 +4,7 @@ import Porfolio from "./components/Portfolio";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ContactForm from "./components/Contact";
+import Resume from "./components/Resume";
 
 function App() {
   const [navChoices] = useState([
@@ -25,6 +26,7 @@ function App() {
           {currentChoice.name === "About me" && <About></About>}
           {currentChoice.name === "Portfolio" && <Porfolio></Porfolio>}
           {currentChoice.name === "Contact" && <ContactForm></ContactForm>}
+          {currentChoice.name === "Resume" && <Resume></Resume>}
         </>
       </main>
       <Footer></Footer>
