@@ -7,12 +7,14 @@ function Project() {
       description:
         "Search for your favorite movies or find new favorites and add them to your custom lists!",
       link: "https://protected-woodland-09194.herokuapp.com",
+      github: "https://github.com/tddstuke/Not-Another-IMDB",
     },
     {
       name: "Tech Blog",
       description:
         "Read, write and comment on Tech news using this intuitive blog site!",
       link: "https://agile-mesa-60950.herokuapp.com/",
+      github: "https://github.com/tddstuke/Tech-Blog",
     },
   ]);
 
@@ -39,6 +41,12 @@ function Project() {
             <div className="card-block p-2">
               <p className="card-text">{image.description}</p>
             </div>
+            <a
+              href={image.github}
+              className="card-footer d-flex justify-content-center"
+            >
+              <i className="bi bi-github" style={{ fontSize: 20 }}></i>
+            </a>
           </div>
         </a>
       ))}
