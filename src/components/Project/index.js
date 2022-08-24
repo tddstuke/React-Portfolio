@@ -3,6 +3,13 @@ import React, { useState } from "react";
 function Project() {
   const [projects] = useState([
     {
+      name: "Voting With Friends",
+      description:
+        "Make big and little choices eaiser by polling your friends or co-workers with this easy to use app!",
+      link: "https://shielded-bastion-93901.herokuapp.com/",
+      github: "https://github.com/votingwithfriends",
+    },
+    {
       name: "Not Another IMDB",
       description:
         "Search for your favorite movies or find new favorites and add them to your custom lists!",
@@ -23,7 +30,7 @@ function Project() {
       {projects.map((image, i) => (
         <a
           href={image.link}
-          className="card col-md-5 p-2 text-reset text-decoration-none"
+          className="card col-md-5 p-2 m-3 text-reset text-decoration-none"
           key={image.name}
         >
           <div className="col">
