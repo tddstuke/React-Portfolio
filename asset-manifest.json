@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.6e674157.css",
-    "main.js": "/react-portfolio/static/js/main.f254e7d4.js",
+    "main.js": "/react-portfolio/static/js/main.713aa73a.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/me.jpg": "/react-portfolio/static/media/me.850de319cfeadc746af0.jpg",
+    "static/media/0.jpg": "/react-portfolio/static/media/0.d62277beca98a48c28c8.jpg",
     "static/media/bootstrap-icons.woff?": "/react-portfolio/static/media/bootstrap-icons.e559bf06bc84fd9525e6.woff",
     "static/media/bootstrap-icons.woff2?": "/react-portfolio/static/media/bootstrap-icons.ea98e12d2d58747f9fc5.woff2",
-    "static/media/1.jpg": "/react-portfolio/static/media/1.3c5eab09ed51baa546d9.jpg",
+    "static/media/2.jpg": "/react-portfolio/static/media/2.3c5eab09ed51baa546d9.jpg",
     "static/media/todd-stuke-resume.pdf": "/react-portfolio/static/media/todd-stuke-resume.39593a601edd92814a71.pdf",
-    "static/media/0.jpg": "/react-portfolio/static/media/0.f0f3f972f8d741904593.jpg",
+    "static/media/1.jpg": "/react-portfolio/static/media/1.f0f3f972f8d741904593.jpg",
     "index.html": "/react-portfolio/index.html",
     "main.6e674157.css.map": "/react-portfolio/static/css/main.6e674157.css.map",
-    "main.f254e7d4.js.map": "/react-portfolio/static/js/main.f254e7d4.js.map",
+    "main.713aa73a.js.map": "/react-portfolio/static/js/main.713aa73a.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e674157.css",
-    "static/js/main.f254e7d4.js"
+    "static/js/main.713aa73a.js"
   ]
 }
