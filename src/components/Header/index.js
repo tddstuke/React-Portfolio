@@ -5,8 +5,8 @@ function Header(props) {
   const { navChoices = [], setCurrentChoice, currentChoice } = props;
   return (
     <div className="container">
-      <header className="row d-md-flex justify-content-md-between">
-        <h2 className="col-md-3 mt-5 mb-3">
+      {/* <header className="row d-md-flex justify-content-md-between"> */}
+      {/* <h2 className="col-md-3 mt-5 mb-3">
           <a
             className="text-reset text-decoration-none"
             data-testid="link"
@@ -14,19 +14,23 @@ function Header(props) {
           >
             Todd Stuke
           </a>
-        </h2>
-        <Navbar expand="md" className=" col-md-7">
-          <Container>
-            <Navbar.Brand className="navbar-brand" href="#">
-              Todd Stuke
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+        </h2> */}
+      <Navbar expand="md" className=" row d-md-flex justify-content-md-between">
+        <Container>
+          <Navbar.Brand
+            className="navbar-brand col-md-3 mt-md-5 mb-md-3 mx-sm-3 ml-sm-0"
+            href="/"
+          >
+            Todd Stuke
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Container className="mx-sm-2">
               <Nav className="row col-md-12 list-unstyled">
                 {/* <ul className="row col-md-12 list-unstyled"> */}
                 {navChoices.map((choice) => (
                   <Nav.Link
-                    className={`col-md-3 mt-md-5 mb-md-3  ${
+                    className={`col-md-3 mt-md-5 mb-md-3 ${
                       currentChoice.name === choice.name && "text-primary"
                     }`}
                     key={choice.name}
@@ -42,10 +46,11 @@ function Header(props) {
                 ))}
                 {/* </ul> */}
               </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-        {/* <button
+            </Container>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {/* <button
               className="navbar-toggler"
               type="button"
               data-toggle="collapse"
@@ -75,7 +80,7 @@ function Header(props) {
             </div>
           </div>
         </nav> */}
-      </header>
+      {/* </header> */}
     </div>
   );
 }
