@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import About from "./components/About";
 import Porfolio from "./components/Portfolio";
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContactForm from "./components/Contact";
 import Resume from "./components/Resume";
@@ -16,11 +16,11 @@ function App() {
   const [currentChoice, setCurrentChoice] = useState(navChoices[0]);
   return (
     <div>
-      <Nav
+      <Header
         navChoices={navChoices}
         setCurrentChoice={setCurrentChoice}
         currentChoice={currentChoice}
-      ></Nav>
+      ></Header>
       <main>
         <>
           {currentChoice.name === "About me" && <About></About>}
