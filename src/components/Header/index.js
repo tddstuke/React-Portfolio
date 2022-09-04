@@ -18,7 +18,7 @@ function Header(props) {
       <Navbar expand="md" className=" row d-md-flex justify-content-md-between">
         <Container>
           <Navbar.Brand
-            className="navbar-brand col-md-3 mt-md-5 mb-md-3 mx-sm-3 ml-sm-0"
+            className="navbar-brand fw-bold fs-2 col-md-3 mt-md-5 mb-md-3 mx-sm-3 ml-sm-0"
             href="/"
           >
             Todd Stuke
@@ -27,7 +27,6 @@ function Header(props) {
           <Navbar.Collapse id="basic-navbar-nav">
             <Container className="mx-sm-2">
               <Nav className="row col-md-12 list-unstyled">
-                {/* <ul className="row col-md-12 list-unstyled"> */}
                 {navChoices.map((choice) => (
                   <Nav.Link
                     className={`col-md-3 mt-md-5 mb-md-3 ${
@@ -50,37 +49,6 @@ function Header(props) {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {/* <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="navbar1"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbar1">
-              <ul className="row col-md-12 list-unstyled">
-                {navChoices.map((choice) => (
-                  <li
-                    className={`col-md-3 mt-md-5 mb-md-3  ${
-                      currentChoice.name === choice.name && "text-primary"
-                    }`}
-                    key={choice.name}
-                  >
-                    <span
-                      onClick={() => {
-                        setCurrentChoice(choice);
-                      }}
-                    >
-                      {choice.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </nav> */}
-      {/* </header> */}
     </div>
   );
 }
