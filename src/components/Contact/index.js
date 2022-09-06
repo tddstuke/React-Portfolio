@@ -33,10 +33,30 @@ function ContactForm() {
     }
   }
 
-  function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    // console.log(formState);
+    try {
+      let response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formState),
+      });
+      let result = await response.json();
+      alert(result.status);
+    } catch (err) {
+      console.log(err);
+    }
+    setFormState({
+      name: "",
+      email: "",
+      message: "",
+    });
+    e.target.reset();
     console.log(formState);
-  }
+  };
 
   return (
     <section className="container mt-5">
@@ -52,7 +72,7 @@ function ContactForm() {
             <input
               className="form-control"
               type="text"
-              defaultValue={name}
+              defaultValue=""
               onBlur={handleChange}
               name="name"
             />
