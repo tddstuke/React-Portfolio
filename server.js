@@ -2,15 +2,32 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const PORT = process.env.PORT || 5000;
 const dotenv = require("dotenv");
+const path = require("path");
 
 dotenv.config();
 
 const app = express();
+if (process.env.NODE_ENV === "production") {
+  const root = require("path").join(__dirname, "build");
+  app.use(express.static(root));
+  app.get("*", (req, res) => {
+    res.sendFile("index.html", { root });
+  });
+}
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../../client/dist")));
+// }
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../../client/dist/index.html"));
+// });
+
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+app.listen(PORT, () => console.log("Server Running"));
 
 var smtpTransport = require("nodemailer-smtp-transport");
 

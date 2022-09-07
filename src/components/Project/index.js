@@ -28,12 +28,9 @@ function Project() {
   return (
     <div className="row d-flex justify-content-around my-5">
       {projects.map((image, i) => (
-        <a
-          href={image.link}
-          className="card col-md-5 p-2 m-3 text-reset text-decoration-none"
-          key={image.name}
-        >
-          <div className="col">
+        <div className="card col-md-5 p-2 m-3 " key={image.name}>
+          <a href={image.link} className="text-reset text-decoration-none">
+            {/* <div className="col"> */}
             <div className="card-block p-2">
               <h4 className="card-title">{image.name}</h4>
             </div>
@@ -48,14 +45,14 @@ function Project() {
             <div className="card-block p-2">
               <p className="card-text">{image.description}</p>
             </div>
-            <a
-              href={image.github}
-              className="card-footer d-flex justify-content-center"
-            >
-              <i className="bi bi-github" style={{ fontSize: 20 }}></i>
-            </a>
-          </div>
-        </a>
+          </a>
+          <a
+            href={image.github}
+            className="card-footer d-flex justify-content-center"
+          >
+            <i className="bi bi-github" style={{ fontSize: 20 }}></i>
+          </a>
+        </div>
       ))}
     </div>
   );
