@@ -37,16 +37,13 @@ function ContactForm() {
     e.preventDefault();
     // console.log(formState);
     try {
-      let response = await fetch(
-        "https://toddstuke-dev.herokuapp.com/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json;charset=utf-8",
-          },
-          body: JSON.stringify(formState),
-        }
-      );
+      let response = await fetch("https://toddstuke-dev.herokuapp/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formState),
+      });
       let result = await response.json();
       alert(result.status);
     } catch (err) {
