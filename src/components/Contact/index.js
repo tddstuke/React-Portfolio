@@ -37,16 +37,13 @@ function ContactForm() {
     e.preventDefault();
     // console.log(formState);
     try {
-      let response = await fetch(
-        "https://still-reef-99308.herokuapp.com/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json;charset=utf-8",
-          },
-          body: JSON.stringify(formState),
-        }
-      );
+      let response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formState),
+      });
       let result = await response.json();
       alert(result.status);
     } catch (err) {
