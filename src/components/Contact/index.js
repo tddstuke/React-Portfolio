@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { validateEmail } from "../../utils/helpers";
+import axios from "axios";
+import emailjs from "@emailjs/browser";
+// const dotenv = require("dotenv");
+// const path = require("path");
+// dotenv.config();
 
 function ContactForm() {
   const [errorMessage, setErrorMessage] = useState("");
@@ -11,6 +16,31 @@ function ContactForm() {
   });
 
   const { name, email, message } = formState;
+  const form = useRef();
+  const sendEmail = (formState) => {
+    // e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY,
+        console.log(process.env.REACT_APP_PUBLIC_KEY),
+        console.log(process.env.REACT_APP_SERVICE_ID),
+        console.log(process.env.REACT_APP_TEMPLATE_ID)
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message Sent! Thank You!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert(error);
+        }
+      );
+  };
 
   function handleChange(e) {
     if (e.target.name === "email") {
@@ -35,17 +65,12 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(formState);
+
     try {
-      let response = await fetch("/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formState),
-      });
-      let result = await response.json();
-      alert(result.status);
+      sendEmail();
+      // let response = await axios.post("/contact", formState);
+      // let result = await response.json();
+      // alert(result.status);
     } catch (err) {
       console.log(err);
     }
@@ -63,6 +88,7 @@ function ContactForm() {
       <h3 className="my-4">Contact Me</h3>
       <div className="row">
         <form
+          ref={form}
           id="contact-form"
           className="col-md-6 card p-2"
           onSubmit={handleSubmit}
