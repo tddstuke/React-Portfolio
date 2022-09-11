@@ -2,9 +2,6 @@ import React, { useState, useRef } from "react";
 import { validateEmail } from "../../utils/helpers";
 import axios from "axios";
 import emailjs from "@emailjs/browser";
-// const dotenv = require("dotenv");
-// const path = require("path");
-// dotenv.config();
 
 function ContactForm() {
   const [errorMessage, setErrorMessage] = useState("");
@@ -17,9 +14,7 @@ function ContactForm() {
 
   const { name, email, message } = formState;
   const form = useRef();
-  const sendEmail = (formState) => {
-    // e.preventDefault();
-
+  const sendEmail = (f) => {
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -68,9 +63,6 @@ function ContactForm() {
 
     try {
       sendEmail();
-      // let response = await axios.post("/contact", formState);
-      // let result = await response.json();
-      // alert(result.status);
     } catch (err) {
       console.log(err);
     }
