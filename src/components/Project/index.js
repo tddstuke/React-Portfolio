@@ -5,14 +5,14 @@ function Project() {
     {
       name: "Voting With Friends",
       description:
-        "Make big and little choices eaiser by polling your friends or co-workers with this easy to use app!(currently under contruction)",
+        "Make big and little choices easier by polling your friends or co-workers with this easy to use app!(currently under contruction)",
       link: "https://shielded-bastion-93901.herokuapp.com/",
       github: "https://github.com/votingwithfriends",
     },
     {
       name: "Not Another IMDB",
       description:
-        "Search for your favorite movies or find new favorites and add them to your custom lists!",
+        "Search for your favorite movies or find new favorites and add them to your custom lists! Version 2.0 coming soon!",
       link: "https://protected-woodland-09194.herokuapp.com",
       github: "https://github.com/tddstuke/Not-Another-IMDB",
     },
@@ -25,7 +25,8 @@ function Project() {
     },
     {
       name: "Weather Dashboard",
-      description: "Search the forecast for any city",
+      description:
+        "Search the forecast for any city and receive a five day forecast",
       link: "https://tddstuke.github.io/Weather-Dashboard/",
       github: "https://github.com/tddstuke/Weather-Dashboard",
     },
@@ -48,7 +49,7 @@ function Project() {
   return (
     <div className="row d-flex justify-content-around my-5">
       {projects.map((image, i) => (
-        <div className="card col-md-5 p-2 m-3 " key={image.name}>
+        <div className="card shadow col-md-5 p-2 m-3" key={image.name}>
           <a href={image.link} className="text-reset text-decoration-none">
             {/* <div className="col"> */}
             <div className="card-block p-2">
@@ -66,9 +67,10 @@ function Project() {
               <p className="card-text">{image.description}</p>
             </div>
           </a>
+
           <a
             href={image.github}
-            className="card-footer d-flex justify-content-center"
+            className="card-footer mt-auto d-flex justify-content-center"
           >
             <i className="bi bi-github" style={{ fontSize: 20 }}></i>
           </a>

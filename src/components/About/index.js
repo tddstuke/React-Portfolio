@@ -4,8 +4,8 @@ function About() {
   return (
     <div className="container">
       <section>
-        <h3 className="m-5 text-center text-lg-start px-5">About Me</h3>
-        <div className="card">
+        <h3 className="m-5 text-center text-lg-start  px-5">About Me</h3>
+        <div className="card shadow">
           <div className="row justify-content-center align-items-center">
             <div className="col-md-3 col-lg-3 d-flex justify-content-md-center">
               <img

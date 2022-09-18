@@ -82,10 +82,10 @@ function ContactForm() {
         <form
           ref={form}
           id="contact-form"
-          className="col-md-6 card p-2"
+          className="shadow col-lg-6 card p-2"
           onSubmit={handleSubmit}
         >
-          <div className="form-group">
+          <div className="form-group p-3">
             <label htmlFor="name">Name:</label>
             <input
               className="form-control"
@@ -95,7 +95,7 @@ function ContactForm() {
               name="name"
             />
           </div>
-          <div className="form-group">
+          <div className="form-group p-3">
             <label htmlFor="email">Email Address:</label>
             <input
               className="form-control"
@@ -105,7 +105,7 @@ function ContactForm() {
               name="email"
             />
           </div>
-          <div className="form-group">
+          <div className="form-group p-3">
             <label htmlFor="message">Message:</label>
             <textarea
               className="form-control"
@@ -120,7 +120,7 @@ function ContactForm() {
               <p className="error-text">{errorMessage}</p>
             </div>
           )}
-          <button className="btn col-md-2 mt-3 btn-primary " type="submit">
+          <button className="btn col-lg-2 m-3 btn-primary" type="submit">
             Submit
           </button>
         </form>

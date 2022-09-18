@@ -15,7 +15,7 @@ function App() {
   ]);
   const [currentChoice, setCurrentChoice] = useState(navChoices[0]);
   return (
-    <div>
+    <div className="">
       <Header
         navChoices={navChoices}
         setCurrentChoice={setCurrentChoice}
