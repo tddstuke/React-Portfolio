@@ -5,7 +5,7 @@ function Project() {
     {
       name: "Voting With Friends",
       description:
-        "Make big and little choices eaiser by polling your friends or co-workers with this easy to use app!",
+        "Make big and little choices eaiser by polling your friends or co-workers with this easy to use app!(currently under contruction)",
       link: "https://shielded-bastion-93901.herokuapp.com/",
       github: "https://github.com/votingwithfriends",
     },
