@@ -23,6 +23,26 @@ function Project() {
       link: "https://agile-mesa-60950.herokuapp.com/",
       github: "https://github.com/tddstuke/Tech-Blog",
     },
+    {
+      name: "Weather Dashboard",
+      description: "Search the forecast for any city",
+      link: "https://tddstuke.github.io/Weather-Dashboard/",
+      github: "https://github.com/tddstuke/Weather-Dashboard",
+    },
+    {
+      name: "Budget Tracker",
+      description:
+        "Track deposits and withdrawals with or without data/internet connection",
+      link: "https://infinite-shelf-94097.herokuapp.com/",
+      github: "https://github.com/tddstuke/Budget-Tracker",
+    },
+    {
+      name: "Note Taker",
+      description:
+        "Organize, create and delete notes with this handy Note Taker app",
+      link: "https://fathomless-castle-53803.herokuapp.com/notes",
+      github: "https://github.com/tddstuke/Note-Taker",
+    },
   ]);
 
   return (
