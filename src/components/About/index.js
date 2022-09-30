@@ -18,15 +18,15 @@ function About() {
             <div className="col-md-12 col-lg-8">
               <p className="m-5">
                 {" "}
-                Hello! My name is Todd Stuke and I am a recent graduate of a 6
-                month full-stack coding bootcamp at the University of Kansas.
-                Prior to this I had no coding or web development experience.
-                Through hard work and determination I have now developed skills
-                in both front-end and back-end web development. I hope you'll
-                take time to look at my projects I built during class (including
-                this portfolio!) and some I have built or modified after. My
-                Resume and a Contact page are also available here as well as a
-                link to my GitHub. Hope to hear from you soon!
+                Hello! My name is Todd Stuke and I am a recent graduate of a
+                full-stack coding bootcamp at the University of Kansas. Through
+                hard work and determination I have developed skills in both
+                front-end and back-end web development including responsive
+                design, and database management. I hope you will take time to
+                look at the projects I built during class (including this
+                portfolio!) and some I have built or modified after. My Resume
+                and a Contact page are also available here as well as a link to
+                my GitHub , LinkedIn and Email. Hope to hear from you soon!
               </p>
             </div>
           </div>
