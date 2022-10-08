@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 function Project() {
   const [projects] = useState([
-    {
-      name: "Voting With Friends",
-      description:
-        "Make big and little choices easier by polling your friends or co-workers with this easy to use app!(currently under construction)",
-      link: "https://shielded-bastion-93901.herokuapp.com/",
-      github: "https://github.com/votingwithfriends",
-    },
+    // {
+    //   name: "Voting With Friends",
+    //   description:
+    //     "Make big and little choices easier by polling your friends or co-workers with this easy to use app!(currently under construction)",
+    //   link: "https://shielded-bastion-93901.herokuapp.com/",
+    //   github: "https://github.com/votingwithfriends",
+    // },
     {
       name: "Not Another IMDB",
       description:

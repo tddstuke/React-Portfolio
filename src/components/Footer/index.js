@@ -15,7 +15,7 @@ function footer() {
           <i className="bi bi-linkedin" style={{ fontSize: 50 }}></i>
         </a>
         <a href="mailto:tddstuke@gmail.com" className="col-1 me-5">
-          <i class="bi bi-envelope" style={{ fontSize: 50 }}></i>
+          <i className="bi bi-envelope" style={{ fontSize: 50 }}></i>
         </a>
       </footer>
     </div>
